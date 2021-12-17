@@ -1,0 +1,75 @@
+#employee-homepage-grid-container {
+    background-color: #ccd9f7;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.1fr 2fr 4fr;
+    grid-template-areas: 
+        "nav nav nav"
+        "submit-form submit-form submit-form"
+        "reimbursement-display reimbursement-display reimbursement-display";
+}
+
+#reimbursement-submit-form {
+    background-color: #f6f9ff;
+    width: 300px;
+    height: 300px;
+    margin: 7em auto;
+    border-radius: 0.5em;
+    padding-top: 10px;
+    text-align: center;
+    box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
+}
+
+#reimbursement-submit-form h2 {
+    text-align: center;
+}
+
+#reimbursement-submit-form div {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+#reimbursements {
+    grid-area: reimbursement-display;
+}
+
+#reimbursement-table {
+    background-color: #f6f9ff;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+th, td {
+    border: 1px solid #999;
+    border-spacing: 0.5rem;
+}
+
+#reimbursement-submit-form {
+    grid-area: submit-form;
+}
+
+#reimbursements h2{
+    font-size: 30px;
+    text-align: center;
+}
+
+#reimbursement-submit-form div {
+    margin-top: 0px;
+}
+
+nav {
+    grid-area: nav;
+}
+
+nav h1 {
+    text-align: center;
+    font-size: 40px;
+}
+
+#logout {
+    margin: 0;
+    position: absolute;
+    left: 48%;
+    right: 52%;
+}

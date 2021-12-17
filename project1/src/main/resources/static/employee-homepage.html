@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="employee-homepage.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+</head>
+<body>
+    <div id="receipt-image-modal" class="modal">
+        <div class="modal-background"></div>
+        <div class="modal-content"></div>
+        <button class="modal-close is-large" aria-label="close"></button>
+    </div>
+    
+    <div id="employee-homepage-grid-container">
+        <nav>
+            <h1>Welcome to the Employee Homepage</h1>
+            <button id="logout">Logout</button>
+        </nav>
+
+        <div id="reimbursements">
+            <h2>Reimbursements</h2>
+            <table id="reimbursement-table">
+                <thead>
+                    <tr>
+                        <th>id  </th>
+                        <th>amount  </th>
+                        <th>submitted timestamp  </th>
+                        <th>resolved timestamp  </th>
+                        <th>status  </th>
+                        <th>reimbursement type  </th>
+                        <th>description  </th>
+                        <th>receipt  </th>
+                        <th>manager id  </th>
+                        <th>employee id</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+
+        <div id="reimbursement-submit-form">
+            <h2>Submit New Reimbursement</h2>
+
+            <div>
+                <label for="amount">Amount:</label>
+                <input type="number" id="amount" />
+            </div>
+
+            <div>
+                <label for="reimbursement_type">Type:</label>
+                <select id="reimbursement_type">
+                    <option value="TRAVEL">TRAVEL</option>
+                    <option value="LODGING">LODGING</option>
+                    <option value="FOOD">FOOD</option>
+                    <option value="OTHER">OTHER</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="description">Description:</label>
+                <input type="text" id="description" />
+            </div>
+            
+            <div>
+                <label for="receipt">Receipt Upload (JPEG, PNG, or GIF)</label>
+                <input type="file" id="receipt" />
+            </div>
+            
+            <div>
+                <button id="submit-reimbursement-btn">Submit Reimbursement</button>
+            </div>
+        </div>
+    </div>
+    <script src="employee-homepage.js"></script>
+</body>
+</html>
